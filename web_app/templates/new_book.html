@@ -1,0 +1,40 @@
+<!-- web_app/templates/new_book.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    /* .text_box{
+        padding-left: 15px;
+    } */
+
+    .pre{
+        font-family: Courier;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">New Books!</h1>
+    <br></br>
+    <h2 align="center">Add a new book to our database!</h2>
+    <div align="center">
+        <form action="/books/create" method="POST"></form>
+
+            <div align="left" style="margin-left: 40%; padding-bottom:5px">
+                <label><pre><b>Title: </b></pre></label>
+                <input type="text" class="text_box" name ="book_title">
+            </div>
+
+            <div align="left" style="margin-left: 40%; padding-top:5px">
+                <label><pre><b>Author: </b></pre></label>
+                <input type="text" name ="author_name">
+
+                <button>Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
