@@ -1,7 +1,5 @@
 # web_app/models.py
 
-# web_app/models.py
-
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
@@ -13,6 +11,14 @@ class Book(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(128))
     author_id = db.Column(db.String(128))
+
+# class User(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     name = db.Column(db.String(128))
+
+# class Tweet(db.Model):
+#     user_id = 
+#     tweet = db.Column(db.String(140))    
 
 def parse_records(database_records):
     """
@@ -35,4 +41,4 @@ def parse_records(database_records):
         parsed_record = record.__dict__
         del parsed_record["_sa_instance_state"]
         parsed_records.append(parsed_record)
-    return parsed_records
+        return parsed_records

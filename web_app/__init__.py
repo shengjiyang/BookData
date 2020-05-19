@@ -7,7 +7,7 @@ from web_app.models import db, migrate
 from web_app.routes.home_routes import home_routes
 from web_app.routes.book_routes import book_routes
 
-DATABASE_URI = "sqlite:////Users/samuel/Programming/GitHub/Lambda\ School/Assignments/BookData/book_database.db" # using absolute filepath on Mac (recommended)
+DATABASE_URI = "sqlite:////Users/samuel/Programming/GitHub/Lambda School/Assignments/BookData/book_database.db" # using absolute filepath on Mac (recommended)
 
 def create_app():
     app = Flask(__name__)
