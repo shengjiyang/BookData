@@ -1,6 +1,6 @@
 <!-- web_abbs/templates/books.html -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
     <style>
     ul {
@@ -23,7 +23,7 @@
         {% if books %}
         <ul>
             {% for book in books %}
-            <li>{{ book["title"] }}</li>
+            <li>{{ book.title }}</li>
             {% endfor %}
         </ul>
         {% else %}
@@ -31,4 +31,34 @@
         {% endif %}
     </div>
 </body>
-</html>
+</html> -->
+
+
+<!-- web_app/templates/books.html -->
+
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>Books Page</title>
+{% endblock %}
+
+{% block content %}
+
+    <h2 align="center">Welcome to the Books Page</h2>
+
+    <p align="center">{{ message }}</p>
+
+    {% if books %}
+        <div align="center">
+            <ul style="display: table; margin:0 auto;">
+                {% for book in books %}
+                <li align="left">{{ book.title }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    {% else %}
+        <p>Books not found.</p>
+    {% endif %}
+
+{% endblock %}

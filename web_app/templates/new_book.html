@@ -1,6 +1,6 @@
 <!-- web_app/templates/new_book.html -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <style>
     /* .text_box{
@@ -25,7 +25,7 @@
 
             <div align="left" style="margin-left: 40%; padding-bottom:5px">
                 <label><pre><b>Title: </b></pre></label>
-                <input type="text" class="text_box" name ="book_title">
+                <input type="text" class="text_box" name ="title">
             </div>
 
             <div align="left" style="margin-left: 40%; padding-top:5px">
@@ -37,4 +37,27 @@
         </form>
     </div>
 </body>
-</html>
+</html> -->
+
+
+<!-- web_app/templates/new_book.html -->
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h1>New Book Page</h1>
+
+    <p>Please fill out the form and submit to create a new book!</p>
+
+    <form action="/books/create" method="POST">
+
+        <label>Title:</label>
+        <input type="text" name="title">
+
+        <label>Author:</label>
+        <input type="text" name="author_name">
+
+        <button>Submit</button>
+    </form>
+{% endblock %}
